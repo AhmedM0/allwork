@@ -1,0 +1,75 @@
+ .formContainer {
+     background-color: white;
+     display: block;
+     width: 40%;
+     margin: 100px auto 50px auto;
+     padding: 20px 30px 40px 30px;
+     font-family: 'Montserrat', sans-serif;
+     text-align: center;
+     box-shadow: 0 0 20px 0 rgba(0,0,0,1);
+}
+ .formContainer h1 {
+     font-size: 16px;
+     text-transform: uppercase;
+     letter-spacing: 0.8px;
+}
+ .formContainer h2 {
+     font-size: 13px;
+     text-align: center;
+     color: grey;
+     font-weight: lighter;
+     letter-spacing: 0.4px;
+}
+ form {
+     padding: 0px;
+}
+label {
+	display: block;
+	padding: 40px 0 0 0;
+}
+ input {
+     border: solid grey 0.5px;
+     padding: 15px 0px 15px 10px;
+     color: black;
+     margin-top: 10px;
+     width: 90%;
+}
+#colorGroup  {
+	width: 10%;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	
+}
+ .submit {
+     background-color: black;
+     display: inline-block;
+     color: white;
+     font-family: 'Montserrat', sans-serif;
+     width: 100px;
+     text-align: center;
+     margin-top: 30px;
+     transition: all 1s cubic-bezier(.57,.05,.25,1);
+     padding: 15px 0px 15px 0px;
+}
+ .submit:hover {
+     background-color: grey;
+     display: inline-block;
+     width: 100px;
+     text-align: center;
+     margin-top: 30px;
+}
+ .submit input {
+     border: none;
+     background-color: transparent;
+     color: #FFFF00;
+     font-weight: bold;
+     padding:10px 0px 10px 0px;
+     margin: 0px;
+     transition: all 1s cubic-bezier(.57,.05,.25,1);
+}
+ .submit:hover input {
+     color: black;
+     font-weight: bold;
+     padding:10px 0px 10px 0px;
+     margin: 0px;
+}

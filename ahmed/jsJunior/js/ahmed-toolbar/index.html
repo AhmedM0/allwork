@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GameW9</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous" />
+</head>
+<style>
+  * {
+      margin: 0;
+      padding: 0;
+    }
+    #box-mw {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-left: 25%;
+    }
+    .box {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      background: hotpink;
+      float: left;
+      margin-right: 20px;
+    }
+    #toolBar {
+      border-bottom: 1px solid #666;
+      padding: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 50px;
+      width: 950px;
+      margin: 0 auto;
+      margin-top: 30px;
+      display: none;
+    }
+    #toolBar a {
+      font-size: 20px;
+      text-decoration: none;
+      color: green;
+    }
+    #toolBar input {
+      padding: 10px 20px;
+      margin-right: 30px;
+    }
+    .active {
+       border: solid royalblue;
+       color: black;
+    }
+  </style>
+
+<body>
+  <div id="toolBar">
+    <input type="text" name="borderRadius" placeholder="Border Radius" id="borderRadius" value="" />
+    <input type="text" name="opacity" placeholder="Opacity" id="opacity" value="" />
+    <input type="text" name="color" placeholder="Color" id="color" value="" />
+    <a href="#" id="delete">Delete</a>
+  </div>
+  <div id="box-mw">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <script>
+    var ToolBar = {
+      toolBarElement: document.getElementById("toolBar"),
+      showBoxDetails: function (box) {
+        document.getElementById("borderRadius").value = App.selectedBox.borderRadius;
+        document.getElementById("opacity").value = App.selectedBox.opacity;
+        document.getElementById("color").value = App.selectedBox.color;
+
+        document.getElementById("borderRadius").addEventListener("keyup", function () {
+          App.selectedBox.borderRadius = this.value;
+          App.selectedBox.changeBr();
+        });
+
+        document.getElementById("opacity").addEventListener("keyup", function () {
+          App.selectedBox.opacity = this.value;
+          App.selectedBox.changeOp();
+        });
+
+        document.getElementById("color").addEventListener("keyup", function () {
+          App.selectedBox.color = this.value;
+          App.selectedBox.changeCo();
+        });
+
+        document.getElementById("delete").addEventListener("click", function () {
+          App.selectedBox.deleteBox();
+        });
+      }
+    }
+
+
+    var Box = function (domElement) {
+      var box = this;
+      var toolBar = document.getElementById("toolBar");
+      box.domElement = domElement;
+      box.borderRadius = 0;
+      box.opacity = 1;
+      box.color = App.getRandomColor();
+      box.domElement.style.backgroundColor = box.color;
+
+      box.domElement.addEventListener("click", function () {
+        App.selectedBox = box;
+        toolBar.style.display = "block"
+        ToolBar.showBoxDetails(); // pass the box element into the tooltip object
+      });
+
+
+      box.changeBr = function () {
+        box.domElement.style.borderRadius = box.borderRadius + "px";
+      };
+
+      box.changeOp = function () {
+        box.domElement.style.opacity = box.opacity;
+      };
+
+      box.changeCo = function () {
+        box.domElement.style.backgroundColor = box.color;
+      };
+
+      box.deleteBox = function () {
+        box.domElement.style.display = "none";
+      }
+
+      return box;
+    };
+
+    var App = {
+      selectedBox: "",
+      getRandomColor: function () {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }
+    };
+
+
+    var arrDomBoxes = Array.from(document.getElementsByClassName("box")); // convert this into an array
+    arrDomBoxes.forEach(function (item, index) {
+      new Box(item);
+    });
+
+    const box = document.getElementsByClassName("box");
+
+    for (let i = 0; i < box.length; i++) {
+      boxAction(box[i], i);
+    }
+    
+    function boxAction(domElement, ) {
+      domElement.addEventListener("click", function () {
+        this.classList.toggle("active");
+        for (let i = 0; i < box.length; i++) {
+        }
+      });
+    }
+
+  </script>
+</body>
+
+</html>

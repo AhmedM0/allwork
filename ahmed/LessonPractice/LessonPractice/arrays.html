@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Arrays</title>
+ </head>
+ <body>
+     
+     <script>
+
+         
+         var names = ['John', 'Mark', 'Jane'];
+         var years = new Array(1990, 1969, 1948);
+         
+         console.log(names);
+         console.log(names.length); // how many 
+         
+          names[1] = 'ben';
+         
+         
+         names[names.length] = 'mary';
+         
+          console.log(names);
+         
+         var john = ['john', 'smith', 1990, 'designer', false];
+         
+         john.push('blue');
+         john.unshift('Mr');
+          console.log(john);
+         
+         john.pop();
+          console.log(john);
+         
+                  
+         john.pop();
+          console.log(john);
+         
+            john.shift();
+          console.log(john);
+         
+         console.log(john.indexOf(1990));
+         
+          var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer'; 
+         console.log(isDesigner);
+         
+         john.indexOf('designer');
+         
+     </script>
+     
+     
+ </body>
+ </html>

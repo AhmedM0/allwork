@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!-- FORM OPENS HERE -->
+  <form>
+    <div class="formContainer">
+      <label>First Name</label>
+      <input type="text" name="strFirstName" value="" class="required">
+      </br>
+      <label>Last Name</label>
+      <input type="text" name="strFirstName" value="" class="required">
+      </br>
+      <label>Email</label>
+      <input type="text" name="strEmail" value="" class="required">
+
+      <div id="colorGroup" class="requiredGroup">
+        <input type="checkbox" name="favColor" class="required" value="red">Red</br>
+        <input type="checkbox" name="favColor" class="required" value="blue">Blue</br>
+        <input type="checkbox" name="favColor" class="required" value="green">Green</br>
+      </div>
+      <input type="submit" name="send" onClick="return checkform()" class="submit">
+    </div>
+  </form>
+	<!-- FORM CLOSES HERE -->
+	<!-- JAVASCRIPT TAG OPENS HERE -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

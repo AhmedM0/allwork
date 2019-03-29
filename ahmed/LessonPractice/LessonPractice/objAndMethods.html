@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Objects</title>
+ </head>
+ <body>
+     
+     <script>
+// defines object with syntax brackets "object literal"
+        var john = {
+             firstName: 'John',
+             lastName: 'Smith',
+             birthYear: 1993,
+             family: ['john', 'mark', 'bob', 'emily'],
+             job: 'teacher',
+             isMarried: false,
+             calcAge: function(){
+                   this.age = 2019 - this.birthYear;
+             }
+        }; 
+         
+//         console.log(john.calcAge());
+//     john.age = john.calcAge();
+         john.calcAge();
+         console.log(john);
+         
+         
+     </script>
+     
+     
+ </body>
+ </html>

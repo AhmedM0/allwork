@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>C4</title>
+ </head>
+ <body>
+     
+     <script>
+
+
+        var john = {
+            fullName: 'John Smith',
+            mass: 143,
+            height: 1.95,
+            calcBMI: function(){
+                this.bmi = this.mass / (this.height * this.height);
+                return this.bmi;
+            }
+        }
+        
+         
+        var mac = {
+            fullName: 'Mac Miller',
+            mass: 78,
+            height: 1.64,
+            calcBMI: function(){
+                this.bmi = this.mass / (this.height * this.height);
+                return this.bmi;
+            }
+        }
+
+
+  
+
+        if (  john.calcBMI() > mac.calcBMI()){
+            console.log(john.fullName + ' has a higher bmi of' + john.bmi);
+        }
+            else if  (mac.bmi > john.bmi) {
+                console.log(mac.fullName + ' has a higher bmi of' + mac.bmi);
+            }
+            else {
+                console.log('They have the same bmi');
+            }
+        
+         
+     </script>
+     
+     
+ </body>
+ </html>

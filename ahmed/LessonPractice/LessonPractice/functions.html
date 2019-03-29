@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Varible mutation</title>
+ </head>
+ <body>
+     
+     <script>
+   
+         
+         function calculateAge(birthYear) 
+         {
+             return 2018 - birthYear;
+         }
+         
+         var ageJohn = calculateAge(1990);
+         var ageMike = calculateAge(1994);
+         var ageJane = calculateAge(1940);
+         console.log(ageJohn,ageJane, ageMike);
+         
+         function yearsUntilRetirement(year, FirstName)
+         {
+             var age = calculateAge(year);
+             var retirement = 65 - age;
+             
+             if (retirement>0){
+                
+                 console.log(FirstName + ' Retires in ' + retirement + ' Years');
+             }
+             
+             else {
+                  console.log(FirstName +' is already retired');
+             }
+         
+         }
+         
+         yearsUntilRetirement(1990, 'John');
+         yearsUntilRetirement(1948, 'Mike');
+         yearsUntilRetirement(1969, 'Jane');
+         
+     </script>
+     
+     
+ </body>
+ </html>

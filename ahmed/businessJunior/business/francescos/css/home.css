@@ -1,0 +1,806 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, ul, li, h2, h3{
+  font-family: 'Prata', serif;
+}
+
+p, a {
+  font-family: 'Slabo 27px', serif;
+}
+
+[class*="col-"] {
+float: left; padding: 15px;box-sizing: border-box;;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%; }
+.row:before, row:after {
+content: "";
+display: table;
+clear: both;
+}
+.row:after {
+clear: both;
+}
+
+.home{
+	background-image: url(../imgs/heroimage.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 97vh;
+	position: relative;
+  background-position: top center ;
+}
+
+.header{
+	width: 100%;
+	display: inline-block;
+}
+
+.logo{
+	width: 70%;
+	
+}
+
+.logo img{
+	width: 100%;
+}
+
+.headerleft{
+	width: 20%;
+	float: left;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+
+.headerright{
+	width: 70%;
+	float: right;
+	padding-top: 50px;
+}
+
+
+.reservationbox{
+	width: 20%;
+	border: 1px solid white; 
+	text-align: center;
+	float: right;
+	margin-right: 50px;
+}
+
+.reservationbox a {
+	padding: 20px 20px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;	
+	font-size: 25px;
+}
+
+ul, li {
+  	text-decoration: none;
+  	text-transform: uppercase;
+  }
+
+  ul.main_navi{
+    width: 70%;
+    font-size: 16px;
+    margin: 0;
+    float: left;
+    padding-top: 20px;
+    box-sizing: border-box;
+
+  }
+  
+  ul.main_navi li{
+    float: left;
+    background-color: transparent;
+    position: relative;
+    border: 0px solid white;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+  }
+ 
+  ul.main_navi li a{
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+    color: white;
+  }
+
+ ul.main_navi li a:hover{
+  background: transparent;
+  color: white;
+  border-bottom: 3px solid white;
+  transition: all 0.2s ease-in;
+
+  }
+
+  ul.main_navi li:hover .sub_navi{
+    display: block;
+  }
+  
+  ul.main_navi li > .sub_navi{
+    display: none;
+  }
+  
+  ul.main_navi li .sub_navi{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  ul.main_navi li .sub_navi li{
+    float: none;
+    clear: both;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .cf:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+
+  .quote {
+  	position: absolute;
+  	top: 50%;
+    width: 100%;
+  	color: white;
+  	font-size: 18px;
+
+  }
+
+  .quote h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+  }
+
+
+  .quote p {
+  	text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .quote {
+  -webkit-animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+    .wrapper {
+      height: 100vh;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .about {
+      height: 50vh;
+      width: 50%;
+      background-color: black;
+      color: white;
+      line-height: 200px;
+      float: left;
+      text-align: center;
+      text-transform: uppercase;
+
+    }
+
+    .about a {
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+      line-height: 50vh;
+      text-align: center;
+    }
+      
+    .img1 {
+      background: url(../imgs/pastanonhover.jpg) center/cover no-repeat;
+      width: 50%;
+      height: 50vh;
+      float: right;
+
+    }
+    .img2 {
+      background: url(../imgs/wine.jpg) center/cover no-repeat;
+      width: 50%;
+      height: 50vh;
+      float: left;
+      background-color: black;
+
+    }
+    .img3 {
+      background: url(../imgs/rewardnonhover.jpg) center/cover no-repeat;
+      width: 50%;
+      height: 50vh;
+      float: right;
+      background-color: black;
+    }
+
+    .overlay {
+      display: flex;
+      height: 50vh;
+      background: rgba(0, 0, 0, 0);
+      text-align: center;
+    }
+
+    .overlay a {
+      text-decoration: none;
+      display: none;
+      line-height: 50vh;
+      color: #fff;
+      font-size: 30px; 
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .overlay:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .overlay:hover a {
+      display: block;
+      margin: 0 auto;
+         }
+
+     #aboutwrap {
+      height: 89vh;
+      width: 1200px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    #aboutwrap h1{
+      text-align: center;
+      padding-top: 10vh;
+      font-size: 3.5rem;
+      padding-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1.45px;
+    }
+
+    #aboutwrap img {
+        float: right;
+       
+    }
+
+    .abouttext {
+      font-size: 18px;
+      display: block;
+      font-size: 1.3rem;  
+      line-height: 1.4;
+
+    }
+
+    .abouttext p {
+      margin-bottom: 1.5rem;
+    }
+
+
+    /* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding-top: 85px;
+    padding-left: 10%;
+}
+
+.row{
+  height: 60vh;
+  background-color: #eeee;
+
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.column img {
+  width: 60%;
+
+}
+
+.column h1 {
+  font-size: 1.5rem;
+  padding-top: 20px;
+
+}
+
+.column p {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 20px;
+  width: 70%;
+}
+
+
+    .heroreservation {
+      background-image: url(../imgs/reservations.jpg);
+      width: 100%;
+      height: 50vh;
+      background-repeat: no-repeat;
+      position: relative;
+      background-position: center;
+      margin-top: 0vh;
+    }
+
+
+    #whiteborder {
+        position: absolute;
+        color: white;
+        font-size: 3.5rem;
+        border: 1px solid white;
+        width: 35%;
+        height: 100px;
+        text-align: center;
+        top: 45%;
+        left: 33%;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+     #whiteborder h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 25px;
+
+      }
+
+      #reservationwrap{
+        height: 56vh;
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 60px;
+      }
+
+      .test{
+        width: 100%;
+        background-color: #eee;
+       
+      }
+
+
+      #reservationwrap h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        margin-top: 10vh;
+        text-transform: uppercase;
+      }
+
+
+      #reservationwrap p {
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        text-align: left;
+        width: 100%;
+
+      }
+      .form{
+        display: flex;
+        flex-flow: row;
+      }
+
+
+      select {
+        width: 25%;
+        border: 1px solid darkgray;
+        padding: 20px 0 10px 90px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .form__area{
+        position: relative;
+      }
+       i{
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      .fa-user{
+        top: 13px;
+        left: 10px;
+        font-size: 1.5rem;
+        position: absolute;
+      }
+
+      .fa-calendar{
+        top: 13px;
+        left: 260px;
+        font-size: 1.5rem;
+        position: absolute;
+      }
+
+      .fa-clock {
+        top: 13px;
+        left: 510px;
+        font-size: 1.5rem;
+        position: absolute;
+      }
+
+      .form input{
+        background-color: red;
+        color: white;
+        border: none;
+        width: 25%;
+       
+      }
+
+      .calender {
+        position: absolute;
+        top: 13px;
+        left: 300px;
+        font-size: 1.5rem;
+        border: none;
+      }
+   
+    #menuwrapper{
+      width: 100%;
+      height: 80vh;
+      margin-top: 15vh;
+    }
+
+    .images {
+      margin-right: 2vw;
+      float: right;
+      width: 50%;
+    }
+
+
+    .text{
+        font-size: 1.5rem;
+        float: left;
+        width: 40%;
+        height: 68vh;
+        background-color: #eeee;
+        margin-top: 18px;
+        position: relative;
+        margin-left: 7vh;
+        border-radius: 10px;
+    }
+
+    .text h1 {
+      padding-left: 10px;
+      padding-top: 10px;
+      font-size: 2.5rem;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    td, th {
+        text-align: left;
+        font-family: 'Slabo 27px', serif;
+        font-size: 1.5rem;
+    }
+
+    /* This highlights the table */
+    /*tr:nth-child(3) { 
+        background-color: #dddddd;
+    }*/
+
+    #dbox a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        padding: 15px;
+        background-color: red;
+        position: absolute;
+        margin-top: 72vh;
+        margin-left: 38.4%;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        border-radius: 10px;
+
+    }
+
+  .menu-disc:nth-child(1):after {
+      content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
+      display: block;
+      font-size: 1rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: 'Slabo 27px', serif;
+    }
+
+    #winewrap{
+      background-image: url(../imgs/winebg.jpg);
+      width: 100%;
+      height: 950px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 8vh;
+      position: relative;
+
+    }
+
+    .winetext {
+      position: absolute;
+      margin-left: 22vw;
+      margin-top: 8vh;
+      width: 50vw;
+      height: 83vh;
+      background: rgba(0, 0, 0, 0.7);}
+
+    .winetext h1 {
+      color: white;
+      margin-top: 50px;
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 3.5rem;
+    }
+
+    .winetext h2 {
+      color: white;
+      margin-top: 10px;
+      padding-left: 50px;
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    .winetext table {
+      color: white;
+    }
+
+    .winetext td, th{
+        text-align: left;
+        font-family: 'Slabo 27px', serif;
+        font-size: 1.6rem;
+        padding-left: 45px;
+    }
+ 
+     .wine-disc:nth-child(1):after {
+      content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
+      display: block;
+      font-size: 0.8rem;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-family: 'Slabo 27px', serif;
+      font-style: italic;
+    }
+
+    iframe {
+      position: absolute;
+    }
+  
+  #contactwrap {
+    width: 100%;
+    height: 110vh;
+    background-image: url(../imgs/contacthero.jpg);
+    background-attachment: fixed;
+  }
+
+  .banner{
+    font-size: 2rem;
+    background-color: #eeee;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    margin-top: 0vh;
+  }
+
+  .banner p {
+    padding-top: 8.5vh;
+    text-transform: uppercase;
+  }
+  
+  #contactform {
+    margin-top: 400px;
+    color: #fff;
+    display: inline-block;
+
+  }
+
+  #contactform h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+#contactform h2 {
+   font-size: 1rem;
+
+  
+}
+
+#contactform form {
+  margin-top: 50px;
+}
+
+
+.contact-container {
+  margin-left: 50px;
+}
+
+.form-control {
+  width: 700px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#contactform input {
+  height: 45px;
+}
+
+form .submit {
+  background-color: #b29600;
+  border-color: transparent;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: 'Prata', serif;
+}
+
+.contact-info {
+  width: 500px;
+  height: 520px;
+  background-color: #eeee; background: rgba(0, 0, 0, 0.9); 
+  float: right;
+  margin-top: 40vh;
+  margin-right: 12vw;
+  color: white;
+  line-height: 40px;
+  color: #eeee;
+
+}
+
+.contact-info h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+ }
+
+.contact-info h2 {
+  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-left: 20px;
+ 
+}
+
+.contact-info p {
+  font-size: 1rem; 
+  text-align: left;
+  padding-left: 20px;
+}
+
+iframe {
+  margin-bottom: 5vh;
+}
+
+ footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 173px;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+footer img {
+   padding-top: 20px;
+   width: 13%;
+}
+
+footer p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footerlogo {
+
+}
+
+.socails i {
+  font-size: 35px;
+  margin-left: 10px;
+}

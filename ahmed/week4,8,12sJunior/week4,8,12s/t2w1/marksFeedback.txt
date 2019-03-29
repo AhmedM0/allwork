@@ -1,0 +1,41 @@
+RESEARCH
+-----------
+1. typically on wireframes we dont have colors or fonts. The wireframes are just to give us an idea of how content will layout. 
+2. the sitemap doesn't show WHAT is on a page, just show the pages that are going to exist. 
+3. for research, make sure to give me the URL of the sites you found. Also, add a couple more and maybe a bit more depth to what you like or dislike. 
+4. missing URL file, please always include that when you hand in your week 4 and 8 projects
+
+CODING
+---------
+HTML
+- Your folder structures seem a bit out of wack. I'm noticing that you have site.css outside of the css folder? make sure not to do that. 
+- index.php why do you have an  class="" that is empty on line 12?
+- missing alt tags on your HTML images
+- inside your header.php you have inline js, that should be in its own js file inside the js folder
+- looks like you are also using jquery... where did you get this code?
+- about.php you need to continue having proper html indenting
+- don't have alt tags with ... in them. 
+- where did you get your form validation stuff? I'd like you to show me this
+
+PHP
+- In your index.php file you close your </body></html> then you are including your partials/footer.php which then again closes those two tags. This means the tags are already closed when you close them a second time. 
+- For your foreach statements please use {} rather than :  end endforeach
+- Why on about.php are you including all your sql queries again?
+$arrImages = getData("SELECT * FROM photos");
+$arrPackageImages = getData("SELECT * FROM packages");
+$arrHeroImage = getData("SELECT * FROM hero");
+$arrWeddingSlides = getData("SELECT * FROM wedding_slider");
+
+-at the end of family.php you have a bunch of empty line breaks. Those should be removed
+
+Mobile
+- on the mobile for the pricing page the boxes dont resize correctly
+- where is the URL where I can view the form submissions?
+
+
+
+Research: 83%
+Coding: 73%
+Design: pending
+
+

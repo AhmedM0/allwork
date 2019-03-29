@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  font-family: "Fahkwang", sans-serif;
+}
+
+#log {
+  font-size: 1.2rem;
+  position: absolute;
+  color: white;
+  top: 1.3rem;
+  left: 20%;
+  z-index: 100;
+}
+
+#snake {
+  width: 608px;
+  height: 608px;
+  margin: 0 auto;
+}

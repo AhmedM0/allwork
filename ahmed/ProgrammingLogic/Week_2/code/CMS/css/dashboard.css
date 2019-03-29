@@ -1,0 +1,37 @@
+ul {
+	list-style: none;
+}
+.sidebar {
+	width: 10%;
+	padding: 15px;
+	margin: 0;
+	background: #333;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.sidebar .sidebar_nav li a {
+	color: #fff;
+}
+.sidebar .sidebar_nav {
+	padding: 0;
+	margin: 25px 0;
+}
+
+.main {
+	background: #ebebeb;
+	width: 90%;
+	padding: 0;
+	margin: 0;
+	margin-left: 10%;
+}
+
+#post.show {
+	display: block;
+}
+
+#post {
+	display: none;
+}

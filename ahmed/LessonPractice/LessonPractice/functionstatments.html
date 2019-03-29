@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Varible mutation</title>
+ </head>
+ <body>
+     
+     <script>
+   
+         
+         var whatDoYouDo = function(job, firstName)
+         {
+             switch (job) {
+                     
+                 case 'teacher':
+                     return firstName + ' teaches kids how to code';
+                 case 'driver':
+                     return firstName + ' drives uber';
+                 case 'designer':
+                     return firstName + ' designs websites';
+            default:
+                     return firstName + ' does something else';
+                     
+             }
+         }
+         
+         console.log(whatDoYouDo ('teacher', 'john'));
+         console.log(whatDoYouDo ('driver', 'sam'));
+         console.log(whatDoYouDo ('retired', 'jane'));
+         
+     </script>
+     
+     
+ </body>
+ </html>
